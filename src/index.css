@@ -24,6 +24,8 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222 89% 51%;
     --radius: 0.75rem;
+    --font-fira: 'Fira Sans', sans-serif;
+    --font-sans: 'ui-sans-serif', system-ui, sans-serif;
   }
 
   .dark {
@@ -46,11 +48,31 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
+    --font-fira: 'Fira Sans', sans-serif;
+    --font-sans: 'ui-sans-serif', system-ui, sans-serif;
   }
 
   * {
     @apply border-border;
   }
+
+    /* Apply Fira Sans to all text */
+    body {
+      font-family: var(--font-sans);
+      @apply font-normal;
+      letter-spacing: 0.01em;
+    }
+  
+    /* Heading weights */
+    h1, h2, h3 {
+      font-family: var(--font-fira), var(--font-sans);
+      @apply font-semibold; /* 600 weight */
+    }
+  
+    /* Numeric typography */
+    code, pre, .mono {
+      font-family: 'Fira Mono', monospace;
+    }
   body {
     @apply bg-background text-foreground;
   }

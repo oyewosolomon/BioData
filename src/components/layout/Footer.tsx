@@ -42,7 +42,6 @@ const Footer: React.FC = () => {
     ],
     support: [
       { name: 'Help Center', href: '#help' },
-      { name: 'API Documentation', href: '#api' },
       { name: 'System Status', href: '#status' },
       { name: 'Training', href: '#training' },
       { name: 'Contact Us', href: '#contact' }
@@ -56,18 +55,7 @@ const Footer: React.FC = () => {
     ]
   };
 
-  const offices: Office[] = [
-    {
-      city: 'Boston',
-      address: '100 Innovation Drive, Boston, MA 02210',
-      phone: '+1 (617) 123-4567'
-    },
-    {
-      city: 'London',
-      address: '25 Tech Square, London, EC2A 4PQ',
-      phone: '+44 20 7123 4567'
-    }
-  ];
+
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -77,7 +65,11 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg"></div>
+              <div className="w-10 h-10 flex items-center justify-center bg-blue-600 rounded-lg">
+              <svg width="30px" height="30px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="48" height="48" fill="white" fill-opacity="0.01"></rect> <path d="M19 44V22C19 18.6863 21.6863 16 25 16C28.3137 16 31 18.6863 31 22V44" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M13 44V22C13 15.3726 18.3726 10 25 10C31.6274 10 37 15.3726 37 22V44" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M7 44V22C7 12.0589 15.0589 4 25 4C34.9411 4 43 12.0589 43 22V44" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M25 44V22" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+          
+              </div>
+             
               <span className="text-xl font-bold">BioData Systems</span>
             </div>
             <p className="text-gray-400 mb-6">
@@ -197,22 +189,6 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Office Locations */}
-        <div className="border-t border-gray-800 mt-12 pt-12">
-          <h3 className="text-lg font-semibold mb-6">Global Offices</h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            {offices.map((office) => (
-              <div key={office.city} className="flex space-x-4">
-                <MapPin className="w-6 h-6 text-blue-500 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold mb-2">{office.city}</h4>
-                  <p className="text-gray-400 text-sm mb-1">{office.address}</p>
-                  <p className="text-gray-400 text-sm">{office.phone}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
 
       {/* Bottom Bar */}

@@ -225,19 +225,12 @@ const ContactSection: React.FC = () => {
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
               <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <Phone className="w-6 h-6 text-blue-600" />
-                  <div>
-                    <h4 className="font-semibold">Phone Support</h4>
-                    <p className="text-gray-600">+1 (800) 123-4567</p>
-                    <p className="text-sm text-gray-500">Mon-Fri, 9AM-6PM EST</p>
-                  </div>
-                </div>
+                
                 <div className="flex items-start space-x-4">
                   <Mail className="w-6 h-6 text-blue-600" />
                   <div>
                     <h4 className="font-semibold">Email</h4>
-                    <p className="text-gray-600">sales@biodatasystems.com</p>
+                    <p className="text-gray-600">hello@biodatasystems.com</p>
                     <p className="text-sm text-gray-500">24/7 response time</p>
                   </div>
                 </div>
