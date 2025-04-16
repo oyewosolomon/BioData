@@ -4,8 +4,8 @@ import { Check, HelpCircle, ArrowRight } from 'lucide-react';
 interface Plan {
   name: string;
   description: string;
-  monthlyPrice: number;
-  annualPrice: number;
+  monthlyPrice: string;
+  annualPrice: string;
   features: string[];
   highlight: boolean;
 }
@@ -31,8 +31,8 @@ const PricingSection: React.FC = () => {
     {
       name: "Starter",
       description: "Perfect for small research teams and pilot studies",
-      monthlyPrice: 999,
-      annualPrice: 899,
+      monthlyPrice: "300,000",
+      annualPrice: "500,000",
       features: [
         "Up to 5 concurrent trials",
         "Basic data management",
@@ -45,8 +45,8 @@ const PricingSection: React.FC = () => {
     {
       name: "Professional",
       description: "Ideal for growing research organizations",
-      monthlyPrice: 1999,
-      annualPrice: 1799,
+      monthlyPrice: "500,000",
+      annualPrice: "750,000",
       features: [
         "Up to 20 concurrent trials",
         "Advanced data management",
@@ -61,8 +61,8 @@ const PricingSection: React.FC = () => {
     {
       name: "Enterprise",
       description: "For large-scale pharmaceutical companies",
-      monthlyPrice: 4999,
-      annualPrice: 4499,
+      monthlyPrice: "800,000",
+      annualPrice: "1,000,000",
       features: [
         "Unlimited concurrent trials",
         "Enterprise data management",
@@ -183,7 +183,7 @@ const PricingSection: React.FC = () => {
               </p>
               <div className="mb-6">
                 <span className="text-4xl font-bold">
-                  ${isAnnual ? plan.annualPrice : plan.monthlyPrice}
+                ₦{isAnnual ? plan.annualPrice : plan.monthlyPrice}
                 </span>
                 <span className={plan.highlight ? 'text-blue-100' : 'text-gray-600'}>
                   /month
